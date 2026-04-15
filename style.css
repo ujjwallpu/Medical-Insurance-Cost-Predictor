@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Particle Canvas */
+#particles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+/* Glass Card */
+.container {
+    width: 450px;
+    max-width: 90%;
+    padding: 40px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    color: white;
+}
+
+.container:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 45px rgba(0, 0, 0, 0.4);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-top: 12px;
+    font-size: 14px;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    margin-top: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 8px;
+    background: #0c0b0b;
+    color: #764ba2;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background: #ffd369;
+    transform: scale(1.05);
+}
+
+/* Glowing Result */
+.result {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0 0 10px #fff,
+                 0 0 20px #ffd369,
+                 0 0 30px #ff9a00;
+    animation: glow 1.5s infinite alternate;
+}
+
+/* Toggle Button */
+.theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 3;
+    cursor: pointer;
+    font-size: 20px;
+    color: white;
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 5px #fff; }
+    to { text-shadow: 0 0 20px #ffd369, 0 0 30px #ff9a00; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Dark Mode */
+body.dark {
+    background: linear-gradient(135deg, #141e30, #243b55);
+}
+.result-big {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: 0 0 15px #ffd369,
+                 0 0 25px #ff9a00,
+                 0 0 40px #ff7300;
+    animation: glow 1.5s infinite alternate;
+}
+.graphs-section {
+margin-top: 20px;
+text-align: left;
+}
+
+details {
+background: rgba(255,255,255,0.15);
+padding: 15px;
+border-radius: 10px;
+margin-top: 15px;
+cursor: pointer;
+}
+
+summary {
+font-size: 18px;
+font-weight: bold;
+}
+
+details p {
+font-size: 14px;
+margin-top: 8px;
+line-height: 1.5;
+}
